@@ -11,6 +11,7 @@ entity serialport is
           BT_UART_TXD:   out std_logic;          
           UART_RXD:   in std_logic;
           UART_TXD:   out std_logic;
+          LED:        out std_logic; 
           SSEG_CA:    out std_logic_vector(6 downto 0);
           SSEG_AN:    out std_logic_vector(3 downto 0)
       );
@@ -44,7 +45,7 @@ architecture behaviour of serialport is
 
     signal uart_data_in_bt: std_logic_vector(7 downto 0);
     signal uart_data_out_bt: std_logic_vector(7 downto 0);
-
+    signal led_lighting:std_logic_vector(7 downto 0):="00000000";
     -- UART receive signals: data is available, and
     -- a line to tell the UART that we have absorbed the data
     signal data_available: std_logic;
@@ -100,7 +101,7 @@ begin
           SEND => send_data,
           CLK => CLK,
           DATA => uart_data_out,
-	  READY => tx_is_ready,
+	      READY => tx_is_ready,
           UART_TX => UART_TXD
         );
 
@@ -122,10 +123,10 @@ uart_receive: process(CLK, SEND_STATE, data_available)
 		    -- If data is available and the transmitter is ready
                     if (data_available = '1' and tx_is_ready_bt = '1') then
 		  	-- Copy the data read in to the transmitter
-			-- and initiate the transmission
+			-- and initiate the transmiss
 			uart_data_out_bt <= uart_data_in;
-
-                        send_data_bt <= '1';
+			send_data_bt <= '1';
+		
                         SEND_STATE <= SENT_BT;
                     end if;
                 
@@ -147,6 +148,14 @@ uart_receive: process(CLK, SEND_STATE, data_available)
                     end if;
             end case;
 	end if;
+	led_lighting<=uart_data_in_bt;
+                    if(led_lighting=x"31") then
+                            LED<='1';
+                            end if;
+                    if(led_lighting=x"30") then
+                         LED<='0';
+                            end if;
+
     end process;
     
 uart_transmit: process(CLK, TAKE_STATE, data_available_bt)
@@ -160,7 +169,7 @@ uart_transmit: process(CLK, TAKE_STATE, data_available_bt)
                   -- Copy the data read in to the transmitter
                 -- and initiate the transmission
                 uart_data_out <= uart_data_in_bt;
-    
+                
                             send_data <= '1';
                             TAKE_STATE <= TAKE_BT;
                         end if;
@@ -184,6 +193,12 @@ uart_transmit: process(CLK, TAKE_STATE, data_available_bt)
                 end case;
         end if;
         end process;
+        
+
+
+        	
+
+         
 --    uart_receive: process(CLK, SEND_STATE, data_available)
 --    begin
 --	if (rising_edge(CLK)) then
