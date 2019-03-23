@@ -30,7 +30,9 @@ rst   :in std_logic;
 clk  	:in std_logic;
 
 
-gonderilecek_data  : in std_logic_vector(7 downto 0);
+gonderilecek_data_8  : in std_logic_vector(7 downto 0);
+gonderilecek_data_16  : in std_logic_vector(15 downto 0);
+data_16_bit  : in std_logic;
 gonder_komutu_aktif_rising_edge  : in std_logic;
 
 spi_data_out       : out std_logic;
@@ -41,14 +43,30 @@ spi_ce				 : out std_logic
 end component;
 
 signal state :integer ;
-signal sayici : unsigned(3 downto 0);
+signal sayici : unsigned(4 downto 0);
 
-signal parelel_data : std_logic_vector(7 downto 0);
+signal paralel_data_8 : std_logic_vector(7 downto 0);
+signal paralel_data_16 : std_logic_vector(15 downto 0);
+signal data_16_bit  : std_logic;
 signal spi_gonder  : std_logic;
 
 signal clk_sayici : unsigned (11 downto 0);
 signal clk_yavas: std_logic;
-constant GRAMWIDTH, GRAMHEIGH: Integer := 128;
+
+constant GRAMWIDTH, GRAMHEIGH: std_logic_vector(15 downto 0):= X"0080";
+constant GRAMSIZE: unsigned(15 downto 0):= X"4000";
+signal piksel_count: unsigned(15 downto 0):= X"0000";
+
+constant BLACK: std_logic_vector(15 downto 0):= X"0000";
+constant BLUE: std_logic_vector(15 downto 0):= X"001F";
+constant RED: std_logic_vector(15 downto 0):= X"00F8";
+constant GREEN: std_logic_vector(15 downto 0):= X"07E0";
+constant CYAN: std_logic_vector(15 downto 0):= X"07FF";
+constant MAGENTA: std_logic_vector(15 downto 0):= X"F81F";
+constant YELLOW: std_logic_vector(15 downto 0):= X"E0FF";
+constant WHITE: std_logic_vector(15 downto 0):= X"FFFF";
+
+
 begin
 
 clk_out<=clk_yavas;
@@ -61,7 +79,9 @@ port map(
 rst => rst,
 clk  => clk_yavas,
 
-gonderilecek_data  => parelel_data,
+gonderilecek_data_8  => paralel_data_8,
+gonderilecek_data_16  => paralel_data_16,
+data_16_bit => data_16_bit,
 gonder_komutu_aktif_rising_edge  => spi_gonder,
 
 spi_data_out       => spi_data_out,
@@ -91,7 +111,9 @@ begin
 	if rst='0' then
 	
 		   state<=0;
-			parelel_data<=X"00";
+		   data_16_bit <= '0';
+			paralel_data_8<=X"00";
+			paralel_data_16<=X"0000";
 			spi_gonder<='0';
 			D_C<='0';		
 			sayici<=(others=>'0');
@@ -101,12 +123,12 @@ begin
 	  case(state) is
 		
 		when 0 =>
-		
-			parelel_data<=X"11"; --EXIT_SLEEP_MODE
+		      data_16_bit <= '0';
+			paralel_data_8<=X"11"; --EXIT_SLEEP_MODE
 			spi_gonder<='1';
 			D_C<='0';	
 			
-			if (sayici< "1111") then--bekleme suresi
+			if (sayici< "01111") then--bekleme suresi
 				sayici<=sayici+1;
 			else
 				sayici<=(others=>'0');
@@ -115,12 +137,12 @@ begin
 			end if;
 				
 		when 1 =>
-		
-			parelel_data<=X"3A"; --SET_PIXEL_FORMAT
+		data_16_bit <= '0';
+			paralel_data_8<=X"3A"; --SET_PIXEL_FORMAT
 			spi_gonder<='1';
 			D_C<='0';	
 			
-			if (sayici< "1111") then--bekleme suresi
+			if (sayici< "01111") then--bekleme suresi
 				sayici<=sayici+1;
 			else
 				sayici<=(others=>'0');
@@ -129,12 +151,12 @@ begin
 			end if;	
 
 		when 2 =>
-		
-			parelel_data<=X"05"; --16 bits per pixel
+		data_16_bit <= '0';
+			paralel_data_8<=X"05"; --16 bits per pixel
 			spi_gonder<='1';
 			D_C<='1';	
 			
-			if (sayici< "1111") then--bekleme suresi
+			if (sayici< "01111") then--bekleme suresi
 				sayici<=sayici+1;
 			else
 				sayici<=(others=>'0');
@@ -143,12 +165,12 @@ begin
 			end if;		
 
 		when 3 =>
-		
-			parelel_data<=X"26"; --SET_GAMMA_CURVE
+		data_16_bit <= '0';
+			paralel_data_8<=X"26"; --SET_GAMMA_CURVE
 			spi_gonder<='1';
 			D_C<='0';	
 			
-			if (sayici< "1111") then--bekleme suresi
+			if (sayici< "01111") then--bekleme suresi
 				sayici<=sayici+1;
 			else
 				sayici<=(others=>'0');
@@ -157,12 +179,12 @@ begin
 			end if;				
 
 		when 4 =>
-		
-			parelel_data<=X"04"; --Select gamma curve 3
+		data_16_bit <= '0';
+			paralel_data_8<=X"04"; --Select gamma curve 3
 			spi_gonder<='1';
 			D_C<='1';	
 			
-			if (sayici< "1111") then--bekleme suresi
+			if (sayici< "01111") then--bekleme suresi
 				sayici<=sayici+1;
 			else
 				sayici<=(others=>'0');
@@ -171,12 +193,12 @@ begin
 			end if;				
 			
 		when 5 =>
-		
-			parelel_data<=X"29"; --SET_DISPLAY_ON
+		data_16_bit <= '0';
+			paralel_data_8<=X"29"; --SET_DISPLAY_ON
 			spi_gonder<='1';
 			D_C<='0';	
 			
-			if (sayici< "1111") then--bekleme suresi
+			if (sayici< "01111") then--bekleme suresi
 				sayici<=sayici+1;
 			else
 				sayici<=(others=>'0');
@@ -185,12 +207,12 @@ begin
 			end if;	
 			
         when 6 =>
-        
-            parelel_data<=X"2C"; --WRITE_MEMORY_START
+        data_16_bit <= '0';
+            paralel_data_8<=X"2C"; --WRITE_MEMORY_START
             spi_gonder<='1';
             D_C<='0';    
             
-            if (sayici< "1111") then--bekleme suresi
+            if (sayici< "01111") then--bekleme suresi
                 sayici<=sayici+1;
             else
                 sayici<=(others=>'0');
@@ -198,15 +220,133 @@ begin
                 spi_gonder<='0';
             end if;    
 --ÝLKLENDÝRME TAMAMLANDI.			
---ekraný renk ile doldur
+--ekran alanýný belirle
 		when 7 =>
-		          state<= 7;
+        data_16_bit <= '0';
+            paralel_data_8<=X"2A"; --SET_COLUMN_ADDRESS
+            spi_gonder<='1';
+            D_C<='0';    
+            
+            if (sayici< "01111") then--bekleme suresi
+                sayici<=sayici+1;
+            else
+                sayici<=(others=>'0');
+                state<=state+1;
+                spi_gonder<='0';
+            end if; 
 
 		when 8 =>
-				state<= 8;
+        data_16_bit <= '1';
+            paralel_data_16<=X"0000"; --SEND X0
+            spi_gonder<='1';
+            D_C<='1';    
+            
+            if (sayici< "11111") then--bekleme suresi
+                sayici<=sayici+1;
+            else
+                sayici<=(others=>'0');
+                state<=state+1;
+                spi_gonder<='0';
+            end if; 
 
-			
-		
+		when 9 =>
+        data_16_bit <= '1';
+            paralel_data_16<=GRAMWIDTH; --SEND X1
+            spi_gonder<='1';
+            D_C<='1';    
+            
+            if (sayici< "11111") then--bekleme suresi
+                sayici<=sayici+1;
+            else
+                sayici<=(others=>'0');
+                state<=state+1;
+                spi_gonder<='0';
+            end if; 
+            
+		when 10 =>
+            data_16_bit <= '0';
+                paralel_data_8<=X"2B"; --SET_PAGE_ADDRESS
+                spi_gonder<='1';
+                D_C<='0';    
+                
+                if (sayici< "01111") then--bekleme suresi
+                    sayici<=sayici+1;
+                else
+                    sayici<=(others=>'0');
+                    state<=state+1;
+                    spi_gonder<='0';
+                end if; 			
+		when 11 =>
+                data_16_bit <= '1';
+                    paralel_data_16<=X"0000"; --SEND Y0
+                    spi_gonder<='1';
+                    D_C<='1';    
+                    
+                    if (sayici< "11111") then--bekleme suresi
+                        sayici<=sayici+1;
+                    else
+                        sayici<=(others=>'0');
+                        state<=state+1;
+                        spi_gonder<='0';
+                    end if; 
+        
+            when 12 =>
+                data_16_bit <= '1';
+                paralel_data_16<=GRAMHEIGH; --SEND Y1
+                spi_gonder<='1';
+                D_C<='1';    
+                
+                if (sayici< "11111") then--bekleme suresi
+                    sayici<=sayici+1;
+                else
+                    sayici<=(others=>'0');
+                    state<=state+1;
+                    spi_gonder<='0';
+                end if; 
+		when 13 =>
+                data_16_bit <= '0';
+                    paralel_data_8<=X"2C"; --WRITE_MEMORY_START
+                    spi_gonder<='1';
+                    D_C<='0';    
+                    
+                    if (sayici< "01111") then--bekleme suresi
+                        sayici<=sayici+1;
+                    else
+                        sayici<=(others=>'0');
+                        state<=state+1;
+                        spi_gonder<='0';
+                    end if; 
+--ekran alanýný belirle tamamlandý
+--ekraný renk ile doldur	
+        when 14 =>   
+            data_16_bit <= '1';
+            paralel_data_16<=GREEN; --SEND WHITE
+            spi_gonder<='1';
+            D_C<='1';    
+            
+            if (sayici< "11111") then--bekleme suresi
+                sayici<=sayici+1;
+            else
+                sayici<=(others=>'0');
+                if (piksel_count < GRAMSIZE) then
+                    piksel_count <= piksel_count + 1;
+                    state <= state;
+                else
+                    piksel_count <= X"0000";
+                    state<=state+1;
+                end if;
+                spi_gonder<='0';
+            end if; 
+            
+         when 15 =>
+            state<=0;
+             data_16_bit <= '0';
+              paralel_data_8<=X"00";
+              paralel_data_16<=X"0000";
+              spi_gonder<='0';
+              D_C<='0';        
+              sayici<=(others=>'0');
+            state <= 15;   
 		 when others=>
 			state<=0;
 				
