@@ -3,7 +3,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
-
+use IEEE.STD_LOGIC_SIGNED;
+use IEEE.STD_LOGIC_UNSIGNED; 
+use ieee.std_logic_unsigned.all;
 entity main is
 port(
 
@@ -13,7 +15,7 @@ clk_out  	:out std_logic;
 
 rst_lcd		:out std_logic;
 d_c			:out std_logic;
-
+led         : out std_logic_vector(15 downto 0);
 spi_data_out       : out std_logic;
 spi_clk				 : out std_logic;
 spi_ce				 : out std_logic
@@ -55,7 +57,15 @@ signal clk_yavas: std_logic;
 
 constant GRAMWIDTH, GRAMHEIGH: std_logic_vector(15 downto 0):= X"0080";
 constant GRAMSIZE: unsigned(15 downto 0):= X"4000";
+signal piksel_state :integer ;
 signal piksel_count: unsigned(15 downto 0):= X"0000";
+signal piksel_x_max: unsigned(15 downto 0):= X"0080";
+signal piksel_y_max: unsigned(15 downto 0):= X"0080";
+signal dummy_piksel_x: unsigned(31 downto 0):= X"00000000";
+signal piksel_x: unsigned(15 downto 0):= X"0000";
+signal piksel_y: unsigned(15 downto 0):= X"0000";
+
+
 
 constant BLACK: std_logic_vector(15 downto 0):= X"0000";
 constant BLUE: std_logic_vector(15 downto 0):= X"001F";
@@ -66,7 +76,17 @@ constant MAGENTA: std_logic_vector(15 downto 0):= X"F81F";
 constant YELLOW: std_logic_vector(15 downto 0):= X"E0FF";
 constant WHITE: std_logic_vector(15 downto 0):= X"FFFF";
 
-
+type COLOR_T is array (0 to 7) of std_logic_vector(15 downto 0);
+signal color : COLOR_T := (BLACK, BLUE, RED, GREEN, CYAN, MAGENTA, YELLOW,WHITE);
+--color(0) <= BLACK;
+--color(1) <= BLUE;
+--color(2) <= RED;
+--color(3) <= GREEN;
+--color(4) <= CYAN;
+--color(5) <= MAGENTA;
+--color(6) <= YELLOW;
+--color(7) <= WHITE;
+signal color_count :integer := 0;
 begin
 
 clk_out<=clk_yavas;
@@ -109,8 +129,9 @@ begin
 
 
 	if rst='0' then
-	
+	       color_count <= 0;
 		   state<=0;
+		   piksel_state<=0;
 		   data_16_bit <= '0';
 			paralel_data_8<=X"00";
 			paralel_data_16<=X"0000";
@@ -320,7 +341,29 @@ begin
 --ekraný renk ile doldur	
         when 14 =>   
             data_16_bit <= '1';
-            paralel_data_16<=GREEN; --SEND WHITE
+            piksel_y <= shift_right(piksel_count,7);
+            led <= std_logic_vector(shift_left(piksel_y,8));
+            dummy_piksel_x <= (piksel_y*piksel_x_max);
+            piksel_x <= piksel_count - dummy_piksel_x(15 downto 0);
+            if( (0 <= piksel_x ) and (piksel_x < shift_right(unsigned(piksel_x_max),1))) then
+                if ((0 <= piksel_y ) and (piksel_y < shift_right(unsigned(piksel_y_max),1))) then
+                    led <= "0000000000001000";
+                    paralel_data_16<=color(color_count);
+                else
+                    led <= "0000000000000100";
+                    paralel_data_16<=color(color_count+1);
+                end if;
+            else 
+                if ((0 <= piksel_y ) and (piksel_y < shift_right(unsigned(piksel_y_max),1))) then
+                    led <= "0000000000000010";
+                    paralel_data_16<=color(color_count+2);
+                else
+                    led <= "0000000000000001";
+                    paralel_data_16<=color(color_count+3);
+                end if;
+
+            end if;
+             
             spi_gonder<='1';
             D_C<='1';    
             
@@ -333,20 +376,25 @@ begin
                     state <= state;
                 else
                     piksel_count <= X"0000";
-                    state<=state+1;
+                    if color_count < 4 then
+                        color_count <= color_count + 1;
+                    else
+                        color_count <= 0;
+                    end if;
+                    state<=7;
                 end if;
                 spi_gonder<='0';
             end if; 
             
-         when 15 =>
-            state<=0;
-             data_16_bit <= '0';
-              paralel_data_8<=X"00";
-              paralel_data_16<=X"0000";
-              spi_gonder<='0';
-              D_C<='0';        
-              sayici<=(others=>'0');
-            state <= 15;   
+--         when 15 =>
+--            state<=0;
+--             data_16_bit <= '0';
+--              paralel_data_8<=X"00";
+--              paralel_data_16<=X"0000";
+--              spi_gonder<='0';
+--              D_C<='0';        
+--              sayici<=(others=>'0');
+--            state <= 15;   
 		 when others=>
 			state<=0;
 				
