@@ -7,27 +7,24 @@ set_property PACKAGE_PIN W5 [get_ports clk]
 	#sw15
 	set_property PACKAGE_PIN R2 [get_ports rst]					
         set_property IOSTANDARD LVCMOS33 [get_ports rst]
-        
-   #Sch name = JB8
-        set_property PACKAGE_PIN A17 [get_ports clk_out]                    
-            set_property IOSTANDARD LVCMOS33 [get_ports clk_out]     
+  
             
 
-            #Sch name = JB1
-            set_property PACKAGE_PIN A14 [get_ports spi_ce]                    
-                set_property IOSTANDARD LVCMOS33 [get_ports spi_ce]
-            #Sch name = JB2
-            set_property PACKAGE_PIN A16 [get_ports d_c]                    
-                set_property IOSTANDARD LVCMOS33 [get_ports d_c]
-            #Sch name = JB3
-            set_property PACKAGE_PIN B15 [get_ports rst_lcd]                    
-                set_property IOSTANDARD LVCMOS33 [get_ports rst_lcd]
-            #Sch name = JB4
-            set_property PACKAGE_PIN B16 [get_ports spi_data_out]                    
-                set_property IOSTANDARD LVCMOS33 [get_ports spi_data_out]
-            #Sch name = JB7
-            set_property PACKAGE_PIN A15 [get_ports spi_clk]                    
-                set_property IOSTANDARD LVCMOS33 [get_ports spi_clk]         
+#            #Sch name = JB1
+#            set_property PACKAGE_PIN A14 [get_ports spi_ce]                    
+#                set_property IOSTANDARD LVCMOS33 [get_ports spi_ce]
+#            #Sch name = JB2
+#            set_property PACKAGE_PIN A16 [get_ports d_c]                    
+#                set_property IOSTANDARD LVCMOS33 [get_ports d_c]
+#            #Sch name = JB3
+#            set_property PACKAGE_PIN B15 [get_ports rst_lcd]                    
+#                set_property IOSTANDARD LVCMOS33 [get_ports rst_lcd]
+#            #Sch name = JB4
+#            set_property PACKAGE_PIN B16 [get_ports spi_data_out]                    
+#                set_property IOSTANDARD LVCMOS33 [get_ports spi_data_out]
+#            #Sch name = JB7
+#            set_property PACKAGE_PIN A15 [get_ports spi_clk]                    
+#                set_property IOSTANDARD LVCMOS33 [get_ports spi_clk]         
                 
 # LEDs
 set_property PACKAGE_PIN U16 [get_ports {led[0]}]                    
@@ -62,3 +59,30 @@ set_property PACKAGE_PIN P1 [get_ports {led[14]}]
     set_property IOSTANDARD LVCMOS33 [get_ports {led[14]}]
 set_property PACKAGE_PIN L1 [get_ports {led[15]}]                    
     set_property IOSTANDARD LVCMOS33 [get_ports {led[15]}]
+    
+    
+#Pmod Header JC
+    #Sch name = JC1
+    set_property PACKAGE_PIN K17 [get_ports {spi_ce}]                    
+        set_property IOSTANDARD LVCMOS33 [get_ports {spi_ce}]
+    #Sch name = JC2
+    set_property PACKAGE_PIN M18 [get_ports {d_c}]                    
+        set_property IOSTANDARD LVCMOS33 [get_ports {d_c}]
+    #Sch name = JC3
+    set_property PACKAGE_PIN N17 [get_ports {rst_lcd}]                    
+        set_property IOSTANDARD LVCMOS33 [get_ports {rst_lcd}]
+    #Sch name = JC4
+    set_property PACKAGE_PIN P18 [get_ports {spi_data_out}]                    
+        set_property IOSTANDARD LVCMOS33 [get_ports {spi_data_out}]
+    #Sch name = JC7
+    set_property PACKAGE_PIN L17 [get_ports {spi_clk}]                    
+        set_property IOSTANDARD LVCMOS33 [get_ports {spi_clk}]
+#    #Sch name = JC8
+#    set_property PACKAGE_PIN M19 [get_ports {LCD_DB[1]}]                    
+#        set_property IOSTANDARD LVCMOS33 [get_ports {LCD_DB[1]}]
+#    #Sch name = JC9
+#    set_property PACKAGE_PIN P17 [get_ports {LCD_DB[0]}]                    
+#        set_property IOSTANDARD LVCMOS33 [get_ports {LCD_DB[0]}]
+    ###Sch name = JC10
+    #set_property PACKAGE_PIN R18 [get_ports {JC[7]}]                    
+        #set_property IOSTANDARD LVCMOS33 [get_ports {JC[7]}]

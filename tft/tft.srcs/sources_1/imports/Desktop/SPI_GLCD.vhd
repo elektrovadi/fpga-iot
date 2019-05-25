@@ -11,7 +11,7 @@ port(
 
 rst   :in std_logic;
 clk  	:in std_logic;
-clk_out  	:out std_logic;
+
 
 rst_lcd		:out std_logic;
 d_c			:out std_logic;
@@ -89,7 +89,7 @@ signal color : COLOR_T := (BLACK, BLUE, RED, GREEN, CYAN, MAGENTA, YELLOW,WHITE)
 signal color_count :integer := 0;
 begin
 
-clk_out<=clk_yavas;
+
 rst_lcd<=  rst;
 
 

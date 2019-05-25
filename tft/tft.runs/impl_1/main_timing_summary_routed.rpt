@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat Apr  6 14:01:57 2019
+| Date         : Sat May 18 16:54:56 2019
 | Host         : DESKTOP-3215KAN running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file main_timing_summary_routed.rpt -pb main_timing_summary_routed.pb -rpx main_timing_summary_routed.rpx -warn_on_violation
 | Design       : main
@@ -81,7 +81,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 9 ports with no output delay specified. (HIGH)
+ There are 8 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -126,7 +126,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      6.797        0.000                      0                   12        0.324        0.000                      0                   12        4.500        0.000                       0                    13  
+      6.794        0.000                      0                   12        0.324        0.000                      0                   12        4.500        0.000                       0                    13  
 
 
 All user specified timing constraints are met.
@@ -149,7 +149,7 @@ sys_clk_pin  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-sys_clk_pin         6.797        0.000                      0                   12        0.324        0.000                      0                   12        4.500        0.000                       0                    13  
+sys_clk_pin         6.794        0.000                      0                   12        0.324        0.000                      0                   12        4.500        0.000                       0                    13  
 
 
 ------------------------------------------------------------------------------------------------
@@ -180,7 +180,7 @@ Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing 
 From Clock:  sys_clk_pin
   To Clock:  sys_clk_pin
 
-Setup :            0  Failing Endpoints,  Worst Slack        6.797ns,  Total Violation        0.000ns
+Setup :            0  Failing Endpoints,  Worst Slack        6.794ns,  Total Violation        0.000ns
 Hold  :            0  Failing Endpoints,  Worst Slack        0.324ns,  Total Violation        0.000ns
 PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
@@ -188,7 +188,7 @@ PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Vio
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
-Slack (MET) :             6.797ns  (required time - arrival time)
+Slack (MET) :             6.794ns  (required time - arrival time)
   Source:                 clk_sayici_reg[11]/C
                             (rising edge-triggered cell FDCE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            clk_sayici_reg[11]/D
@@ -196,7 +196,7 @@ Slack (MET) :             6.797ns  (required time - arrival time)
   Path Group:             sys_clk_pin
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
-  Data Path Delay:        3.230ns  (logic 0.924ns (28.606%)  route 2.306ns (71.394%))
+  Data Path Delay:        3.232ns  (logic 0.924ns (28.587%)  route 2.308ns (71.413%))
   Logic Levels:           2  (BUFG=1 CARRY4=1)
   Clock Path Skew:        0.000ns (DCD - SCD + CPR)
     Destination Clock Delay (DCD):    4.786ns = ( 14.786 - 10.000 ) 
@@ -218,16 +218,16 @@ Slack (MET) :             6.797ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[11]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[11]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y46         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[11]/Q
-                         net (fo=2, routed)           0.583     6.125    clk_out_OBUF
-    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     6.221 r  clk_out_OBUF_BUFG_inst/O
-                         net (fo=168, routed)         1.724     7.944    clk_out_OBUF_BUFG
-    SLICE_X36Y46         CARRY4 (Prop_carry4_S[3]_O[3])
-                                                      0.372     8.316 r  clk_sayici_reg[8]_i_1/O[3]
-                         net (fo=1, routed)           0.000     8.316    clk_sayici_reg[8]_i_1_n_4
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[11]/D
+    SLICE_X36Y45         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[11]/Q
+                         net (fo=2, routed)           0.585     6.127    clk_sayici_reg[11]__0
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     6.223 r  clk_sayici_reg_BUFG[11]_inst/O
+                         net (fo=167, routed)         1.724     7.947    clk_sayici_reg_BUFG[11]
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_O[3])
+                                                      0.372     8.319 r  clk_sayici_reg[8]_i_1/O[3]
+                         net (fo=1, routed)           0.000     8.319    clk_sayici_reg[8]_i_1_n_4
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[11]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -238,15 +238,15 @@ Slack (MET) :             6.797ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[11]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[11]/C
                          clock pessimism              0.300    15.086    
                          clock uncertainty           -0.035    15.051    
-    SLICE_X36Y46         FDCE (Setup_fdce_C_D)        0.062    15.113    clk_sayici_reg[11]
+    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.113    clk_sayici_reg[11]
   -------------------------------------------------------------------
                          required time                         15.113    
-                         arrival time                          -8.316    
+                         arrival time                          -8.319    
   -------------------------------------------------------------------
-                         slack                                  6.797    
+                         slack                                  6.794    
 
 Slack (MET) :             7.697ns  (required time - arrival time)
   Source:                 clk_sayici_reg[1]/C
@@ -278,20 +278,20 @@ Slack (MET) :             7.697ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     6.943 r  clk_sayici_reg[0]_i_1/CO[3]
                          net (fo=1, routed)           0.000     6.943    clk_sayici_reg[0]_i_1_n_0
-    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_CO[3])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.057 r  clk_sayici_reg[4]_i_1/CO[3]
                          net (fo=1, routed)           0.000     7.057    clk_sayici_reg[4]_i_1_n_0
-    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[1])
+    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_O[1])
                                                       0.334     7.391 r  clk_sayici_reg[8]_i_1/O[1]
                          net (fo=1, routed)           0.000     7.391    clk_sayici_reg[8]_i_1_n_6
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[9]/D
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[9]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -302,10 +302,10 @@ Slack (MET) :             7.697ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[9]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[9]/C
                          clock pessimism              0.275    15.061    
                          clock uncertainty           -0.035    15.026    
-    SLICE_X36Y46         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[9]
+    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[9]
   -------------------------------------------------------------------
                          required time                         15.088    
                          arrival time                          -7.391    
@@ -342,20 +342,20 @@ Slack (MET) :             7.792ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     6.943 r  clk_sayici_reg[0]_i_1/CO[3]
                          net (fo=1, routed)           0.000     6.943    clk_sayici_reg[0]_i_1_n_0
-    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_CO[3])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.057 r  clk_sayici_reg[4]_i_1/CO[3]
                          net (fo=1, routed)           0.000     7.057    clk_sayici_reg[4]_i_1_n_0
-    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[2])
+    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_O[2])
                                                       0.239     7.296 r  clk_sayici_reg[8]_i_1/O[2]
                          net (fo=1, routed)           0.000     7.296    clk_sayici_reg[8]_i_1_n_5
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[10]/D
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[10]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -366,10 +366,10 @@ Slack (MET) :             7.792ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[10]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[10]/C
                          clock pessimism              0.275    15.061    
                          clock uncertainty           -0.035    15.026    
-    SLICE_X36Y46         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[10]
+    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[10]
   -------------------------------------------------------------------
                          required time                         15.088    
                          arrival time                          -7.296    
@@ -406,20 +406,20 @@ Slack (MET) :             7.808ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     6.943 r  clk_sayici_reg[0]_i_1/CO[3]
                          net (fo=1, routed)           0.000     6.943    clk_sayici_reg[0]_i_1_n_0
-    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_CO[3])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_CO[3])
                                                       0.114     7.057 r  clk_sayici_reg[4]_i_1/CO[3]
                          net (fo=1, routed)           0.000     7.057    clk_sayici_reg[4]_i_1_n_0
-    SLICE_X36Y46         CARRY4 (Prop_carry4_CI_O[0])
+    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_O[0])
                                                       0.223     7.280 r  clk_sayici_reg[8]_i_1/O[0]
                          net (fo=1, routed)           0.000     7.280    clk_sayici_reg[8]_i_1_n_7
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[8]/D
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -430,10 +430,10 @@ Slack (MET) :             7.808ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[8]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[8]/C
                          clock pessimism              0.275    15.061    
                          clock uncertainty           -0.035    15.026    
-    SLICE_X36Y46         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[8]
+    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[8]
   -------------------------------------------------------------------
                          required time                         15.088    
                          arrival time                          -7.280    
@@ -470,17 +470,17 @@ Slack (MET) :             7.811ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     6.943 r  clk_sayici_reg[0]_i_1/CO[3]
                          net (fo=1, routed)           0.000     6.943    clk_sayici_reg[0]_i_1_n_0
-    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_O[1])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_O[1])
                                                       0.334     7.277 r  clk_sayici_reg[4]_i_1/O[1]
                          net (fo=1, routed)           0.000     7.277    clk_sayici_reg[4]_i_1_n_6
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[5]/D
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -491,10 +491,10 @@ Slack (MET) :             7.811ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[5]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[5]/C
                          clock pessimism              0.275    15.061    
                          clock uncertainty           -0.035    15.026    
-    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[5]
+    SLICE_X36Y44         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[5]
   -------------------------------------------------------------------
                          required time                         15.088    
                          arrival time                          -7.277    
@@ -531,17 +531,17 @@ Slack (MET) :             7.832ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     6.943 r  clk_sayici_reg[0]_i_1/CO[3]
                          net (fo=1, routed)           0.000     6.943    clk_sayici_reg[0]_i_1_n_0
-    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_O[3])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_O[3])
                                                       0.313     7.256 r  clk_sayici_reg[4]_i_1/O[3]
                          net (fo=1, routed)           0.000     7.256    clk_sayici_reg[4]_i_1_n_4
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[7]/D
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -552,10 +552,10 @@ Slack (MET) :             7.832ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[7]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[7]/C
                          clock pessimism              0.275    15.061    
                          clock uncertainty           -0.035    15.026    
-    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[7]
+    SLICE_X36Y44         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[7]
   -------------------------------------------------------------------
                          required time                         15.088    
                          arrival time                          -7.256    
@@ -592,17 +592,17 @@ Slack (MET) :             7.906ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     6.943 r  clk_sayici_reg[0]_i_1/CO[3]
                          net (fo=1, routed)           0.000     6.943    clk_sayici_reg[0]_i_1_n_0
-    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_O[2])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_O[2])
                                                       0.239     7.182 r  clk_sayici_reg[4]_i_1/O[2]
                          net (fo=1, routed)           0.000     7.182    clk_sayici_reg[4]_i_1_n_5
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[6]/D
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -613,10 +613,10 @@ Slack (MET) :             7.906ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[6]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[6]/C
                          clock pessimism              0.275    15.061    
                          clock uncertainty           -0.035    15.026    
-    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[6]
+    SLICE_X36Y44         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[6]
   -------------------------------------------------------------------
                          required time                         15.088    
                          arrival time                          -7.182    
@@ -653,17 +653,17 @@ Slack (MET) :             7.922ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_CO[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_CO[3])
                                                       0.674     6.943 r  clk_sayici_reg[0]_i_1/CO[3]
                          net (fo=1, routed)           0.000     6.943    clk_sayici_reg[0]_i_1_n_0
-    SLICE_X36Y45         CARRY4 (Prop_carry4_CI_O[0])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_CI_O[0])
                                                       0.223     7.166 r  clk_sayici_reg[4]_i_1/O[0]
                          net (fo=1, routed)           0.000     7.166    clk_sayici_reg[4]_i_1_n_7
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[4]/D
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -674,10 +674,10 @@ Slack (MET) :             7.922ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[4]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[4]/C
                          clock pessimism              0.275    15.061    
                          clock uncertainty           -0.035    15.026    
-    SLICE_X36Y45         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[4]
+    SLICE_X36Y44         FDCE (Setup_fdce_C_D)        0.062    15.088    clk_sayici_reg[4]
   -------------------------------------------------------------------
                          required time                         15.088    
                          arrival time                          -7.166    
@@ -714,14 +714,14 @@ Slack (MET) :             8.080ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_O[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_O[3])
                                                       0.764     7.033 r  clk_sayici_reg[0]_i_1/O[3]
                          net (fo=1, routed)           0.000     7.033    clk_sayici_reg[0]_i_1_n_4
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[3]/D
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -732,10 +732,10 @@ Slack (MET) :             8.080ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[3]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[3]/C
                          clock pessimism              0.300    15.086    
                          clock uncertainty           -0.035    15.051    
-    SLICE_X36Y44         FDCE (Setup_fdce_C_D)        0.062    15.113    clk_sayici_reg[3]
+    SLICE_X36Y43         FDCE (Setup_fdce_C_D)        0.062    15.113    clk_sayici_reg[3]
   -------------------------------------------------------------------
                          required time                         15.113    
                          arrival time                          -7.033    
@@ -772,14 +772,14 @@ Slack (MET) :             8.140ns  (required time - arrival time)
                          net (fo=1, routed)           1.967     3.425    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096     3.521 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.565     5.086    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.456     5.542 r  clk_sayici_reg[1]/Q
                          net (fo=1, routed)           0.727     6.269    clk_sayici_reg_n_0_[1]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[1]_O[2])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[1]_O[2])
                                                       0.704     6.973 r  clk_sayici_reg[0]_i_1/O[2]
                          net (fo=1, routed)           0.000     6.973    clk_sayici_reg[0]_i_1_n_5
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[2]/D
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -790,10 +790,10 @@ Slack (MET) :             8.140ns  (required time - arrival time)
                          net (fo=1, routed)           1.862    13.250    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    13.341 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          1.445    14.786    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[2]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[2]/C
                          clock pessimism              0.300    15.086    
                          clock uncertainty           -0.035    15.051    
-    SLICE_X36Y44         FDCE (Setup_fdce_C_D)        0.062    15.113    clk_sayici_reg[2]
+    SLICE_X36Y43         FDCE (Setup_fdce_C_D)        0.062    15.113    clk_sayici_reg[2]
   -------------------------------------------------------------------
                          required time                         15.113    
                          arrival time                          -6.973    
@@ -831,16 +831,16 @@ Slack (MET) :             0.324ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[0]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.141     1.587 f  clk_sayici_reg[0]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.141     1.587 f  clk_sayici_reg[0]/Q
                          net (fo=1, routed)           0.173     1.760    clk_sayici_reg_n_0_[0]
-    SLICE_X36Y44         LUT1 (Prop_lut1_I0_O)        0.045     1.805 r  clk_sayici[0]_i_2/O
+    SLICE_X36Y43         LUT1 (Prop_lut1_I0_O)        0.045     1.805 r  clk_sayici[0]_i_2/O
                          net (fo=1, routed)           0.000     1.805    clk_sayici[0]_i_2_n_0
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[0]_O[0])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[0]_O[0])
                                                       0.070     1.875 r  clk_sayici_reg[0]_i_1/O[0]
                          net (fo=1, routed)           0.000     1.875    clk_sayici_reg[0]_i_1_n_7
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[0]/D
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -851,9 +851,9 @@ Slack (MET) :             0.324ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[0]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[0]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y44         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[0]
+    SLICE_X36Y43         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[0]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.875    
@@ -885,14 +885,14 @@ Slack (MET) :             0.327ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[3]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[3]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[3]/Q
                          net (fo=1, routed)           0.183     1.770    clk_sayici_reg_n_0_[3]
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[3]_O[3])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[3]_O[3])
                                                       0.108     1.878 r  clk_sayici_reg[0]_i_1/O[3]
                          net (fo=1, routed)           0.000     1.878    clk_sayici_reg[0]_i_1_n_4
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[3]/D
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -903,9 +903,9 @@ Slack (MET) :             0.327ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[3]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[3]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y44         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[3]
+    SLICE_X36Y43         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[3]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.878    
@@ -937,14 +937,14 @@ Slack (MET) :             0.327ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[4]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y45         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[4]/Q
+    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[4]/Q
                          net (fo=1, routed)           0.176     1.764    clk_sayici_reg_n_0_[4]
-    SLICE_X36Y45         CARRY4 (Prop_carry4_S[0]_O[0])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_S[0]_O[0])
                                                       0.115     1.879 r  clk_sayici_reg[4]_i_1/O[0]
                          net (fo=1, routed)           0.000     1.879    clk_sayici_reg[4]_i_1_n_7
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[4]/D
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -955,9 +955,9 @@ Slack (MET) :             0.327ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[4]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[4]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y45         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[4]
+    SLICE_X36Y44         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[4]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.879    
@@ -989,14 +989,14 @@ Slack (MET) :             0.327ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[8]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y46         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[8]/Q
+    SLICE_X36Y45         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[8]/Q
                          net (fo=1, routed)           0.176     1.764    clk_sayici_reg_n_0_[8]
-    SLICE_X36Y46         CARRY4 (Prop_carry4_S[0]_O[0])
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[0]_O[0])
                                                       0.115     1.879 r  clk_sayici_reg[8]_i_1/O[0]
                          net (fo=1, routed)           0.000     1.879    clk_sayici_reg[8]_i_1_n_7
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[8]/D
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[8]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1007,9 +1007,9 @@ Slack (MET) :             0.327ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[8]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[8]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y46         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[8]
+    SLICE_X36Y45         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[8]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.879    
@@ -1041,16 +1041,16 @@ Slack (MET) :             0.360ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[0]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.141     1.587 f  clk_sayici_reg[0]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.141     1.587 f  clk_sayici_reg[0]/Q
                          net (fo=1, routed)           0.173     1.760    clk_sayici_reg_n_0_[0]
-    SLICE_X36Y44         LUT1 (Prop_lut1_I0_O)        0.045     1.805 r  clk_sayici[0]_i_2/O
+    SLICE_X36Y43         LUT1 (Prop_lut1_I0_O)        0.045     1.805 r  clk_sayici[0]_i_2/O
                          net (fo=1, routed)           0.000     1.805    clk_sayici[0]_i_2_n_0
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[0]_O[1])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[0]_O[1])
                                                       0.106     1.911 r  clk_sayici_reg[0]_i_1/O[1]
                          net (fo=1, routed)           0.000     1.911    clk_sayici_reg[0]_i_1_n_6
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/D
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1061,9 +1061,9 @@ Slack (MET) :             0.360ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[1]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[1]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y44         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[1]
+    SLICE_X36Y43         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[1]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.911    
@@ -1095,14 +1095,14 @@ Slack (MET) :             0.363ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[4]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y45         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[4]/Q
+    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[4]/Q
                          net (fo=1, routed)           0.176     1.764    clk_sayici_reg_n_0_[4]
-    SLICE_X36Y45         CARRY4 (Prop_carry4_S[0]_O[1])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_S[0]_O[1])
                                                       0.151     1.915 r  clk_sayici_reg[4]_i_1/O[1]
                          net (fo=1, routed)           0.000     1.915    clk_sayici_reg[4]_i_1_n_6
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[5]/D
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1113,9 +1113,9 @@ Slack (MET) :             0.363ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[5]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[5]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y45         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[5]
+    SLICE_X36Y44         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[5]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.915    
@@ -1147,14 +1147,14 @@ Slack (MET) :             0.363ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[8]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y46         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[8]/Q
+    SLICE_X36Y45         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[8]/Q
                          net (fo=1, routed)           0.176     1.764    clk_sayici_reg_n_0_[8]
-    SLICE_X36Y46         CARRY4 (Prop_carry4_S[0]_O[1])
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[0]_O[1])
                                                       0.151     1.915 r  clk_sayici_reg[8]_i_1/O[1]
                          net (fo=1, routed)           0.000     1.915    clk_sayici_reg[8]_i_1_n_6
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[9]/D
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[9]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1165,9 +1165,9 @@ Slack (MET) :             0.363ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[9]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[9]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y46         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[9]
+    SLICE_X36Y45         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[9]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.915    
@@ -1199,14 +1199,14 @@ Slack (MET) :             0.372ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[7]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[7]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y45         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[7]/Q
+    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[7]/Q
                          net (fo=1, routed)           0.228     1.815    clk_sayici_reg_n_0_[7]
-    SLICE_X36Y45         CARRY4 (Prop_carry4_S[3]_O[3])
+    SLICE_X36Y44         CARRY4 (Prop_carry4_S[3]_O[3])
                                                       0.108     1.923 r  clk_sayici_reg[4]_i_1/O[3]
                          net (fo=1, routed)           0.000     1.923    clk_sayici_reg[4]_i_1_n_4
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[7]/D
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[7]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1217,9 +1217,9 @@ Slack (MET) :             0.372ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[7]/C
+    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[7]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y45         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[7]
+    SLICE_X36Y44         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[7]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.923    
@@ -1251,16 +1251,16 @@ Slack (MET) :             0.400ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[0]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y44         FDCE (Prop_fdce_C_Q)         0.141     1.587 f  clk_sayici_reg[0]/Q
+    SLICE_X36Y43         FDCE (Prop_fdce_C_Q)         0.141     1.587 f  clk_sayici_reg[0]/Q
                          net (fo=1, routed)           0.173     1.760    clk_sayici_reg_n_0_[0]
-    SLICE_X36Y44         LUT1 (Prop_lut1_I0_O)        0.045     1.805 r  clk_sayici[0]_i_2/O
+    SLICE_X36Y43         LUT1 (Prop_lut1_I0_O)        0.045     1.805 r  clk_sayici[0]_i_2/O
                          net (fo=1, routed)           0.000     1.805    clk_sayici[0]_i_2_n_0
-    SLICE_X36Y44         CARRY4 (Prop_carry4_S[0]_O[2])
+    SLICE_X36Y43         CARRY4 (Prop_carry4_S[0]_O[2])
                                                       0.146     1.951 r  clk_sayici_reg[0]_i_1/O[2]
                          net (fo=1, routed)           0.000     1.951    clk_sayici_reg[0]_i_1_n_5
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[2]/D
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1271,9 +1271,9 @@ Slack (MET) :             0.400ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y44         FDCE                                         r  clk_sayici_reg[2]/C
+    SLICE_X36Y43         FDCE                                         r  clk_sayici_reg[2]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y44         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[2]
+    SLICE_X36Y43         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[2]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.951    
@@ -1305,14 +1305,14 @@ Slack (MET) :             0.403ns  (arrival time - required time)
                          net (fo=1, routed)           0.631     0.858    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.026     0.884 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.563     1.446    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[8]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[8]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X36Y46         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[8]/Q
+    SLICE_X36Y45         FDCE (Prop_fdce_C_Q)         0.141     1.587 r  clk_sayici_reg[8]/Q
                          net (fo=1, routed)           0.176     1.764    clk_sayici_reg_n_0_[8]
-    SLICE_X36Y46         CARRY4 (Prop_carry4_S[0]_O[2])
+    SLICE_X36Y45         CARRY4 (Prop_carry4_S[0]_O[2])
                                                       0.191     1.955 r  clk_sayici_reg[8]_i_1/O[2]
                          net (fo=1, routed)           0.000     1.955    clk_sayici_reg[8]_i_1_n_5
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[10]/D
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[10]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock sys_clk_pin rise edge)
@@ -1323,9 +1323,9 @@ Slack (MET) :             0.403ns  (arrival time - required time)
                          net (fo=1, routed)           0.685     1.099    clk_IBUF
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.029     1.128 r  clk_IBUF_BUFG_inst/O
                          net (fo=12, routed)          0.832     1.959    clk_IBUF_BUFG
-    SLICE_X36Y46         FDCE                                         r  clk_sayici_reg[10]/C
+    SLICE_X36Y45         FDCE                                         r  clk_sayici_reg[10]/C
                          clock pessimism             -0.513     1.446    
-    SLICE_X36Y46         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[10]
+    SLICE_X36Y45         FDCE (Hold_fdce_C_D)         0.105     1.551    clk_sayici_reg[10]
   -------------------------------------------------------------------
                          required time                         -1.551    
                          arrival time                           1.955    
@@ -1345,35 +1345,35 @@ Sources:            { clk }
 
 Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
 Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y1  clk_IBUF_BUFG_inst/I
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y44   clk_sayici_reg[0]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y46   clk_sayici_reg[10]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y46   clk_sayici_reg[11]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y44   clk_sayici_reg[1]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y44   clk_sayici_reg[2]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y44   clk_sayici_reg[3]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y45   clk_sayici_reg[4]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y45   clk_sayici_reg[5]/C
-Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y46   clk_sayici_reg[9]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[0]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   clk_sayici_reg[10]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   clk_sayici_reg[11]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[1]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[2]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[3]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[4]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[5]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   clk_sayici_reg[9]/C
-Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[6]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[0]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   clk_sayici_reg[10]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   clk_sayici_reg[11]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[1]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[2]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[3]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[4]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[5]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y46   clk_sayici_reg[9]/C
-High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[6]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y43   clk_sayici_reg[0]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y45   clk_sayici_reg[10]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y45   clk_sayici_reg[11]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y43   clk_sayici_reg[1]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y43   clk_sayici_reg[2]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y43   clk_sayici_reg[3]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y44   clk_sayici_reg[4]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y44   clk_sayici_reg[5]/C
+Min Period        n/a     FDCE/C   n/a            1.000         10.000      9.000      SLICE_X36Y44   clk_sayici_reg[6]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[0]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[10]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[11]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[1]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[2]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[3]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[4]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[5]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[6]/C
+Low Pulse Width   Slow    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[9]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[0]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[10]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[11]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[1]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[2]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y43   clk_sayici_reg[3]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[4]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[5]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y44   clk_sayici_reg[6]/C
+High Pulse Width  Fast    FDCE/C   n/a            0.500         5.000       4.500      SLICE_X36Y45   clk_sayici_reg[9]/C
 
 
 
