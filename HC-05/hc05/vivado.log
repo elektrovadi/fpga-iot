@@ -2,25 +2,38 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Jan  7 10:37:29 2019
-# Process ID: 176
-# Current directory: D:/PROJECTs/HC-05/hc05
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4268 D:\PROJECTs\HC-05\hc05\hc05.xpr
-# Log file: D:/PROJECTs/HC-05/hc05/vivado.log
-# Journal file: D:/PROJECTs/HC-05/hc05\vivado.jou
+# Start of session at: Sat May 25 12:04:43 2019
+# Process ID: 796
+# Current directory: D:/PROJECTs/fpga-iot/HC-05/hc05
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1384 D:\PROJECTs\fpga-iot\HC-05\hc05\hc05.xpr
+# Log file: D:/PROJECTs/fpga-iot/HC-05/hc05/vivado.log
+# Journal file: D:/PROJECTs/fpga-iot/HC-05/hc05\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/PROJECTs/HC-05/hc05/hc05.xpr
+open_project D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.xpr
+INFO: [Project 1-313] Project file moved from 'D:/PROJECTs/HC-05/hc05' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 858.344 ; gain = 150.957
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 757.488 ; gain = 95.246
 update_compile_order -fileset sources_1
 reset_run synth_1
-launch_runs synth_1 -jobs 4
-[Mon Jan  7 10:38:56 2019] Launched synth_1...
-Run output will be captured here: D:/PROJECTs/HC-05/hc05/hc05.runs/synth_1/runme.log
-exit
-INFO: [Common 17-206] Exiting Vivado at Mon Jan  7 10:58:43 2019...
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 12:07:12 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/synth_1/runme.log
+[Sat May 25 12:07:12 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 12:22:43 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/synth_1/runme.log
+[Sat May 25 12:22:43 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 12:25:57 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/synth_1/runme.log
+[Sat May 25 12:25:57 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/impl_1/runme.log

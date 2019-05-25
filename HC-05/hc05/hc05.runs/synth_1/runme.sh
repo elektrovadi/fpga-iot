@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/PROJECTs/HC-05/hc05/hc05.runs/synth_1'
+HD_PWD='D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

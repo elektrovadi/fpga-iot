@@ -1,0 +1,241 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 796
+License: Customer
+
+Current time: 	Sat May 25 12:04:58 EEST 2019
+Time zone: 	Eastern European Time (Asia/Istanbul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 6
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 375 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ARGE
+User home directory: C:/Users/ARGE
+User working directory: D:/PROJECTs/fpga-iot/HC-05/hc05
+User country: 	TR
+User language: 	tr
+User locale: 	tr_TR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/ARGE/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/ARGE/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/ARGE/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/PROJECTs/fpga-iot/HC-05/hc05/vivado.log
+Vivado journal file location: 	D:/PROJECTs/fpga-iot/HC-05/hc05/vivado.jou
+Engine tmp dir: 	D:/PROJECTs/fpga-iot/HC-05/hc05/.Xil/Vivado-796-DESKTOP-3215KAN
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	149 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 523 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: D:\PROJECTs\fpga-iot\HC-05\hc05\hc05.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 64 MB (+64295kb) [00:00:08]
+// [Engine Memory]: 479 MB (+350296kb) [00:00:08]
+// Tcl Message: open_project D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'D:/PROJECTs/HC-05/hc05' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 523 MB. GUI used memory: 37 MB. Current time: 5/25/19 12:05:00 PM EEST
+// [Engine Memory]: 562 MB (+62834kb) [00:00:13]
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 757.488 ; gain = 95.246 
+// Project name: hc05; location: D:/PROJECTs/fpga-iot/HC-05/hc05; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, serialport(behaviour) (serialport.vhd)]", 1); // B (D, ck)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, serialport(behaviour) (serialport.vhd)]", 1); // B (D, ck)
+// PAPropertyPanels.initPanels (serialport.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, serialport(behaviour) (serialport.vhd)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, serialport(behaviour) (serialport.vhd)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// [Engine Memory]: 591 MB (+740kb) [00:00:30]
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // J
+// [GUI Memory]: 68 MB (+962kb) [00:00:51]
+// Elapsed time: 83 seconds
+selectCodeEditor("serialport.vhd", 166, 364); // ce (w, ck)
+selectCodeEditor("serialport.vhd", 166, 364, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("serialport.vhd", 152, 111); // ce (w, ck)
+selectCodeEditor("serialport.vhd", 152, 111, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// [GUI Memory]: 71 MB (+186kb) [00:02:24]
+// TclEventType: RUN_LAUNCH
+dismissDialog("Resetting Runs"); // bx (ck)
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat May 25 12:07:12 2019] Launched synth_1... Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/synth_1/runme.log [Sat May 25 12:07:12 2019] Launched impl_1... Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 612 MB. GUI used memory: 42 MB. Current time: 5/25/19 12:07:15 PM EEST
+// Elapsed time: 17 seconds
+selectCodeEditor("serialport.vhd", 406, 249); // ce (w, ck)
+// [GUI Memory]: 76 MB (+1415kb) [00:03:10]
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 256ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 82 MB (+2368kb) [00:05:08]
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 87 MB (+492kb) [00:10:32]
+// Elapsed time: 748 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+// Elapsed time: 83 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 7, true); // B (D, ck) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 7); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 9, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 9, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 28 seconds
+selectCodeEditor("Basys3_Master.xdc", 333, 69); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 333, 69, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'c'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 327, 229); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 436, 229); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 327, 336); // ce (w, ck)
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 383, 352); // ce (w, ck)
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 324, 120); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 324, 120, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'c'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 353, 331); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 353, 331, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 380, 348); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 380, 348, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 332, 81); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 332, 81, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'c'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 330, 384); // ce (w, ck)
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 385, 401); // ce (w, ck)
+typeControlKey((HResource) null, "Basys3_Master.xdc", 'v'); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 357, 404); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 280, 288); // ce (w, ck)
+selectCodeEditor("Basys3_Master.xdc", 279, 300); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 92 MB (+557kb) [00:17:50]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bx (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Sat May 25 12:22:43 2019] Launched synth_1... Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/synth_1/runme.log [Sat May 25 12:22:43 2019] Launched impl_1... Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 221ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 163 seconds
+selectCodeEditor("Basys3_Master.xdc", 459, 287); // ce (w, ck)
+// TclEventType: RUN_FAILED
+// ah (ck): Bitstream Generation Failed: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_LOG_WINDOW
+dismissDialog("Bitstream Generation Failed"); // ah (ck)
+selectCodeEditor("Basys3_Master.xdc", 221, 383); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+// TclEventType: FILE_SET_CHANGE
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Save Project"); // aj (ck)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_LAUNCH
+dismissDialog("Resetting Runs"); // bx (ck)
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Sat May 25 12:25:57 2019] Launched synth_1... Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/synth_1/runme.log [Sat May 25 12:25:57 2019] Launched impl_1... Run output will be captured here: D:/PROJECTs/fpga-iot/HC-05/hc05/hc05.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// [GUI Memory]: 97 MB (+269kb) [00:27:40]
+// Elapsed time: 412 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a (Q, ah)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
