@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/PROJECTs/esp8266/esp8266.runs/synth_1'
+HD_PWD='D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

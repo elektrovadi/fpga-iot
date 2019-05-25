@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat May 25 15:15:37 2019
+# Process ID: 4616
+# Current directory: D:/PROJECTs/fpga-iot/tus_takimi
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12184 D:\PROJECTs\fpga-iot\tus_takimi\tus_takimi.xpr
+# Log file: D:/PROJECTs/fpga-iot/tus_takimi/vivado.log
+# Journal file: D:/PROJECTs/fpga-iot/tus_takimi\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/PROJECTs/fpga-iot/tus_takimi/tus_takimi.xpr
+update_compile_order -fileset sources_1

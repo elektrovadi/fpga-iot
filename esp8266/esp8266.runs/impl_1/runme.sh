@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/PROJECTs/esp8266/esp8266.runs/impl_1'
+HD_PWD='D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log WifiTopLevel.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source WifiTopLevel.tcl -notrace
 
 

@@ -149,16 +149,16 @@ set_property PACKAGE_PIN L1 [get_ports {led[15]}]
 
 
 
-#Pmod Header JB
-#Sch name = JB1
-set_property PACKAGE_PIN A14 [get_ports {wifi_rx}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_rx}]
-#Sch name = JB2
-set_property PACKAGE_PIN A16 [get_ports {wifi_tx}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_tx}]
-#Sch name = JB3
-set_property PACKAGE_PIN B15 [get_ports {wifi_enable}]					
-	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_enable}]
+##Pmod Header JB
+##Sch name = JB1
+#set_property PACKAGE_PIN A14 [get_ports {wifi_rx}]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_rx}]
+##Sch name = JB2
+#set_property PACKAGE_PIN A16 [get_ports {wifi_tx}]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_tx}]
+##Sch name = JB3
+#set_property PACKAGE_PIN B15 [get_ports {wifi_enable}]					
+#	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_enable}]
 ##Sch name = JB4
 #set_property PACKAGE_PIN B16 [get_ports {JB[3]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[3]}]
@@ -194,14 +194,14 @@ set_property PACKAGE_PIN B15 [get_ports {wifi_enable}]
 #set_property PACKAGE_PIN L17 [get_ports {JC[4]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[4]}]
 ##Sch name = JC8
-#set_property PACKAGE_PIN M19 [get_ports {JC[5]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[5]}]
-##Sch name = JC9
-#set_property PACKAGE_PIN P17 [get_ports {JC[6]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[6]}]
-##Sch name = JC10
-#set_property PACKAGE_PIN R18 [get_ports {JC[7]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[7]}]
+set_property PACKAGE_PIN M19 [get_ports {wifi_rx}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_rx}]
+#Sch name = JC9
+set_property PACKAGE_PIN P17 [get_ports {wifi_tx}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_tx}]
+#Sch name = JC10
+set_property PACKAGE_PIN R18 [get_ports {wifi_enable}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {wifi_enable}]
 
 
 #Pmod Header JXADC

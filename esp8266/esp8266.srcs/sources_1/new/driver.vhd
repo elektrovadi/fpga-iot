@@ -62,19 +62,19 @@ architecture Behavioral of esp8266_driver is
 --    A     T     +     C     I     P     C     L     O     S     E    \r    \n  EOM (14)
 
 -- Message 6 - chars 80-127  Connect to WIFI
-   x"41",x"54",x"2b",x"43",x"57",x"4a",x"41",x"50",x"3d",x"22",x"62",x"65",x"74",x"69",x"22",x"2C",
-   x"22",x"35",x"33",x"32",x"37",x"39",x"36",x"32",x"32",x"39",x"35",x"22",x"0d",x"0a",x"FF",x"FF",
+   x"41",x"54",x"2b",x"43",x"57",x"4a",x"41",x"50",x"3d",x"22",x"42",x"45",x"54",x"41",x"22",x"2C",
+   x"22",x"42",x"62",x"30",x"34",x"30",x"35",x"32",x"30",x"30",x"32",x"22",x"0d",x"0a",x"FF",x"FF",
    x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",   
---    A     T     +     C     W     J     A     P     =     "     b     e     t     i     "     ,
---    "     5     3     2     7     9     6     2     2     9     5     "    \r    \n    EOM
+--    A     T     +     C     W     J     A     P     =     "     B     E     T     A     "     ,
+--    "     B     b     0     4     0     5     2     0     0     2     "    \r    \n    EOM
 
 
 -- Message 7 - chars 128-175
     x"41",x"54",x"2b",x"43",x"49",x"50",x"53",x"54",x"41",x"52",x"54",x"3d",x"22",x"54",x"43",x"50",
-    x"22",x"2c",x"22",x"31",x"37",x"32",x"2e",x"32",x"30",x"2e",x"31",x"30",x"2e",x"34",x"22",
-    x"2c",x"31",x"31",x"32",x"35",x"0d",x"0a",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF");
+    x"22",x"2c",x"22",x"31",x"39",x"32",x"2e",x"31",x"36",x"38",x"2e",x"34",x"33",x"2E",x"37",x"32",
+    x"22",x"2c",x"31",x"31",x"32",x"35",x"0d",x"0a",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF");
 --     A     T     +     C     I     P     S     T     A     R     T     =     "     T     C     P
---     "     ,     "     1     7     2     .     2     0     .     1     0     .     4     "
+--     "     ,     "     1     9     2     .     1     6     8     .     4     3     .     7     2    "
 --     ,     1     1     2     5    \r    \n
 
     signal current_char  : unsigned(7 downto 0)  := (others => '0');
