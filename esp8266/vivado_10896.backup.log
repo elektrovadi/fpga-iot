@@ -2,33 +2,30 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri May 31 13:02:52 2019
-# Process ID: 7988
+# Start of session at: Sat May 25 12:36:38 2019
+# Process ID: 10896
 # Current directory: D:/PROJECTs/fpga-iot/esp8266
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9592 D:\PROJECTs\fpga-iot\esp8266\esp8266.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6692 D:\PROJECTs\fpga-iot\esp8266\esp8266.xpr
 # Log file: D:/PROJECTs/fpga-iot/esp8266/vivado.log
 # Journal file: D:/PROJECTs/fpga-iot/esp8266\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/PROJECTs/fpga-iot/esp8266/esp8266.xpr
+INFO: [Project 1-313] Project file moved from 'D:/PROJECTs/esp8266' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 753.770 ; gain = 85.781
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 793.172 ; gain = 81.703
 update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 12:37:58 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
 open_hw
 connect_hw_server
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2018.2
-  **** Build date : Jun 14 2018-20:42:52
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A5800EA
 set_property PROGRAM.FILE {D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/WifiTopLevel.bit} [get_hw_devices xc7a35t_0]
@@ -52,39 +49,54 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close_hw
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Fri May 31 13:10:39 2019] Launched synth_1...
+[Sat May 25 12:49:23 2019] Launched synth_1...
 Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log
-[Fri May 31 13:10:39 2019] Launched impl_1...
+[Sat May 25 12:49:23 2019] Launched impl_1...
 Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/WifiTopLevel.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+open_hw
+close_hw
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Fri May 31 13:24:49 2019] Launched synth_1...
+[Sat May 25 13:50:57 2019] Launched synth_1...
 Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log
-[Fri May 31 13:24:49 2019] Launched impl_1...
+[Sat May 25 13:50:57 2019] Launched impl_1...
 Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
-set_property PROGRAM.FILE {D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/WifiTopLevel.bit} [get_hw_devices xc7a35t_0]
-program_hw_devices [get_hw_devices xc7a35t_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
-INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 14:13:56 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log
+[Sat May 25 14:13:56 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 14:19:11 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log
+[Sat May 25 14:19:11 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 14:31:43 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log
+[Sat May 25 14:31:43 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 14:46:46 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log
+[Sat May 25 14:46:46 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 14:47:50 2019] Launched synth_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log
+[Sat May 25 14:47:50 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat May 25 14:55:21 2019] Launched impl_1...
+Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May 25 15:15:13 2019...

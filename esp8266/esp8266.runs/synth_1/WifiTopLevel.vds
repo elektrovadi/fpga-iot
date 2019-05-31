@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat May 25 14:47:53 2019
-# Process ID: 1384
+# Start of session at: Fri May 31 13:24:52 2019
+# Process ID: 3816
 # Current directory: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1
 # Command line: vivado.exe -log WifiTopLevel.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WifiTopLevel.tcl
 # Log file: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/WifiTopLevel.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2696 
+INFO: Helper process launched with PID 3856 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 355.988 ; gain = 98.977
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 355.508 ; gain = 98.867
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'WifiTopLevel' [D:/PROJECTs/fpga-iot/esp8266/esp8266.srcs/sources_1/new/esp8266.vhd:21]
 INFO: [Synth 8-3491] module 'esp8266_driver' declared at 'D:/PROJECTs/fpga-iot/esp8266/esp8266.srcs/sources_1/new/driver.vhd:20' bound to instance 'i_esp8226' of component 'esp8266_driver' [D:/PROJECTs/fpga-iot/esp8266/esp8266.srcs/sources_1/new/esp8266.vhd:51]
@@ -38,7 +38,7 @@ WARNING: [Synth 8-3331] design WifiTopLevel has unconnected port led[7]
 WARNING: [Synth 8-3331] design WifiTopLevel has unconnected port led[6]
 WARNING: [Synth 8-3331] design WifiTopLevel has unconnected port led[5]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 411.379 ; gain = 154.367
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 411.195 ; gain = 154.555
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -51,10 +51,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 411.379 ; gain = 154.367
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 411.195 ; gain = 154.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 411.379 ; gain = 154.367
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 411.195 ; gain = 154.555
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -70,22 +70,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 747.285 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 748.242 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 747.285 ; gain = 490.273
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 748.242 ; gain = 491.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 747.285 ; gain = 490.273
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 748.242 ; gain = 491.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 747.285 ; gain = 490.273
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 748.242 ; gain = 491.602
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "tx_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "data_enable" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -101,7 +101,7 @@ INFO: [Synth 8-5545] ROM "rx_seeing_ok" won't be mapped to RAM because address s
 INFO: [Synth 8-5546] ROM "rx_seeing_prompt" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6040] Register current_char_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 747.285 ; gain = 490.273
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 748.242 ; gain = 491.602
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -231,7 +231,7 @@ WARNING: [Synth 8-3917] design WifiTopLevel has port led[7] driven by constant 0
 WARNING: [Synth 8-3917] design WifiTopLevel has port led[6] driven by constant 0
 WARNING: [Synth 8-3917] design WifiTopLevel has port led[5] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 747.285 ; gain = 490.273
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 748.242 ; gain = 491.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -258,13 +258,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 747.285 ; gain = 490.273
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 748.242 ; gain = 491.602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 757.082 ; gain = 500.070
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 763.047 ; gain = 506.406
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -276,7 +276,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,7 +300,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -313,7 +313,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -325,25 +325,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -362,13 +362,13 @@ Report Cell Usage:
 |1     |BUFG   |     1|
 |2     |CARRY4 |    79|
 |3     |LUT1   |    30|
-|4     |LUT2   |    46|
-|5     |LUT3   |   227|
-|6     |LUT4   |    30|
-|7     |LUT5   |    47|
-|8     |LUT6   |    84|
-|9     |MUXF7  |    16|
-|10    |MUXF8  |     7|
+|4     |LUT2   |    45|
+|5     |LUT3   |   226|
+|6     |LUT4   |    31|
+|7     |LUT5   |    49|
+|8     |LUT6   |    85|
+|9     |MUXF7  |    11|
+|10    |MUXF8  |     5|
 |11    |FDRE   |   236|
 |12    |FDSE   |    24|
 |13    |IBUF   |     3|
@@ -379,19 +379,19 @@ Report Instance Areas:
 +------+------------+---------------+------+
 |      |Instance    |Module         |Cells |
 +------+------------+---------------+------+
-|1     |top         |               |   848|
-|2     |  i_esp8226 |esp8266_driver |   826|
+|1     |top         |               |   843|
+|2     |  i_esp8226 |esp8266_driver |   821|
 |3     |    i_rx    |rx             |    84|
 |4     |    i_tx    |tx             |    84|
 +------+------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 760.848 ; gain = 503.836
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 760.848 ; gain = 167.930
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 760.848 ; gain = 503.836
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 767.219 ; gain = 173.531
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:46 . Memory (MB): peak = 767.219 ; gain = 510.578
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 98 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -401,9 +401,9 @@ No Unisim elements were transformed.
 INFO: [Common 17-83] Releasing license: Synthesis
 43 Infos, 17 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 760.848 ; gain = 516.848
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 767.219 ; gain = 523.277
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/WifiTopLevel.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file WifiTopLevel_utilization_synth.rpt -pb WifiTopLevel_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 760.848 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat May 25 14:48:46 2019...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 767.219 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 31 13:25:47 2019...

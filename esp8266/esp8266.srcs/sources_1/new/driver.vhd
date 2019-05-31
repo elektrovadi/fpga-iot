@@ -71,10 +71,10 @@ architecture Behavioral of esp8266_driver is
 
 -- Message 7 - chars 128-175
     x"41",x"54",x"2b",x"43",x"49",x"50",x"53",x"54",x"41",x"52",x"54",x"3d",x"22",x"54",x"43",x"50",
-    x"22",x"2c",x"22",x"31",x"39",x"32",x"2e",x"31",x"36",x"38",x"2e",x"34",x"33",x"2E",x"37",x"32",
-    x"22",x"2c",x"31",x"31",x"32",x"35",x"0d",x"0a",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF");
+    x"22",x"2c",x"22",x"31",x"39",x"32",x"2e",x"31",x"36",x"38",x"2e",x"34",x"33",x"2e",x"31",x"22",
+    x"2c",x"31",x"31",x"32",x"35",x"0d",x"0a",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF",x"FF"); --Serverin IP ve portunu giriniz
 --     A     T     +     C     I     P     S     T     A     R     T     =     "     T     C     P
---     "     ,     "     1     9     2     .     1     6     8     .     4     3     .     7     2    "
+--     "     ,     "     1     9     2     .     1     6     8     .     4     3     .     1     "
 --     ,     1     1     2     5    \r    \n
 
     signal current_char  : unsigned(7 downto 0)  := (others => '0');

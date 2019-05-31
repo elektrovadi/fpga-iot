@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sat May 25 14:48:46 2019
+| Date         : Fri May 31 13:25:47 2019
 | Host         : DESKTOP-3215KAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file WifiTopLevel_utilization_synth.rpt -pb WifiTopLevel_utilization_synth.pb
 | Design       : WifiTopLevel
@@ -36,8 +36,8 @@ Table of Contents
 | Slice Registers         |  260 |     0 |     41600 |  0.63 |
 |   Register as Flip Flop |  260 |     0 |     41600 |  0.63 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |   16 |     0 |     16300 |  0.10 |
-| F8 Muxes                |    7 |     0 |      8150 |  0.09 |
+| F7 Muxes                |   11 |     0 |     16300 |  0.07 |
+| F8 Muxes                |    5 |     0 |      8150 |  0.06 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -150,17 +150,17 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  236 |        Flop & Latch |
-| LUT3     |  227 |                 LUT |
-| LUT6     |   84 |                 LUT |
+| LUT3     |  226 |                 LUT |
+| LUT6     |   85 |                 LUT |
 | CARRY4   |   79 |          CarryLogic |
-| LUT5     |   47 |                 LUT |
-| LUT2     |   46 |                 LUT |
-| LUT4     |   30 |                 LUT |
+| LUT5     |   49 |                 LUT |
+| LUT2     |   45 |                 LUT |
+| LUT4     |   31 |                 LUT |
 | LUT1     |   30 |                 LUT |
 | FDSE     |   24 |        Flop & Latch |
 | OBUF     |   18 |                  IO |
-| MUXF7    |   16 |               MuxFx |
-| MUXF8    |    7 |               MuxFx |
+| MUXF7    |   11 |               MuxFx |
+| MUXF8    |    5 |               MuxFx |
 | IBUF     |    3 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+

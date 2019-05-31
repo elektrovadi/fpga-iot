@@ -1,0 +1,405 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 7988
+License: Customer
+
+Current time: 	Fri May 31 13:03:29 EEST 2019
+Time zone: 	Eastern European Time (Asia/Istanbul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 6
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 375 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	ARGE
+User home directory: C:/Users/ARGE
+User working directory: D:/PROJECTs/fpga-iot/esp8266
+User country: 	TR
+User language: 	tr
+User locale: 	tr_TR
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/ARGE/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/ARGE/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/ARGE/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/PROJECTs/fpga-iot/esp8266/vivado.log
+Vivado journal file location: 	D:/PROJECTs/fpga-iot/esp8266/vivado.jou
+Engine tmp dir: 	D:/PROJECTs/fpga-iot/esp8266/.Xil/Vivado-7988-DESKTOP-3215KAN
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	144 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 482 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 63 MB (+63806kb) [00:00:10]
+// [Engine Memory]: 467 MB (+337844kb) [00:00:10]
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: D:\PROJECTs\fpga-iot\esp8266\esp8266.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/PROJECTs/fpga-iot/esp8266/esp8266.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/PROJECTs/fpga-iot/esp8266/esp8266.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 487 MB. GUI used memory: 33 MB. Current time: 5/31/19 1:03:32 PM EEST
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 542 MB (+54646kb) [00:00:18]
+// [Engine Memory]: 574 MB (+5420kb) [00:00:21]
+// Project name: esp8266; location: D:/PROJECTs/fpga-iot/esp8266; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 753.770 ; gain = 85.781 
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 80 MB (+14210kb) [00:00:27]
+// [Engine Memory]: 617 MB (+13999kb) [00:00:27]
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, WifiTopLevel(Behavioral) (esp8266.vhd)]", 1); // B (D, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 621 MB. GUI used memory: 42 MB. Current time: 5/31/19 1:03:47 PM EEST
+// PAPropertyPanels.initPanels (driver.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, WifiTopLevel(Behavioral) (esp8266.vhd), i_esp8226 : esp8266_driver(Behavioral) (driver.vhd)]", 2, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, WifiTopLevel(Behavioral) (esp8266.vhd), i_esp8226 : esp8266_driver(Behavioral) (driver.vhd)]", 2, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 19 seconds
+selectCodeEditor("driver.vhd", 110, 294); // ce (w, ck)
+selectCodeEditor("driver.vhd", 209, 300); // ce (w, ck)
+selectCodeEditor("driver.vhd", 179, 331); // ce (w, ck)
+selectCodeEditor("driver.vhd", 44, 331); // ce (w, ck)
+// Elapsed time: 59 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cM, ck)
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A5800EA 
+// TclEventType: HW_DEVICE_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,268 MB. GUI used memory: 47 MB. Current time: 5/31/19 1:05:35 PM EEST
+// Tcl Message: set_property PROGRAM.FILE {D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/WifiTopLevel.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,274 MB (+656650kb) [00:02:19]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/WifiTopLevel.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("driver.vhd", 477, 386); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("driver.vhd", 221, 332); // ce (w, ck)
+// [GUI Memory]: 84 MB (+419kb) [00:03:27]
+// Elapsed time: 42 seconds
+selectCodeEditor("driver.vhd", 440, 407); // ce (w, ck)
+// Elapsed time: 84 seconds
+selectCodeEditor("driver.vhd", 804, 429); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver.vhd", 0); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "driver.vhd", 0, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L (Q, ck)
+selectCodeEditor("driver.vhd", 223, 335); // ce (w, ck)
+selectCodeEditor("driver.vhd", 226, 386); // ce (w, ck)
+selectCodeEditor("driver.vhd", 348, 334); // ce (w, ck)
+selectCodeEditor("driver.vhd", 392, 333); // ce (w, ck)
+selectCodeEditor("driver.vhd", 432, 333); // ce (w, ck)
+selectCodeEditor("driver.vhd", 475, 334); // ce (w, ck)
+selectCodeEditor("driver.vhd", 518, 333); // ce (w, ck)
+selectCodeEditor("driver.vhd", 549, 336); // ce (w, ck)
+selectCodeEditor("driver.vhd", 549, 336, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 556, 336); // ce (w, ck)
+selectCodeEditor("driver.vhd", 556, 336, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 436, 333); // ce (w, ck)
+selectCodeEditor("driver.vhd", 436, 333, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 278, 386); // ce (w, ck)
+selectCodeEditor("driver.vhd", 195, 380); // ce (w, ck)
+selectCodeEditor("driver.vhd", 191, 384); // ce (w, ck)
+selectCodeEditor("driver.vhd", 191, 385); // ce (w, ck)
+selectCodeEditor("driver.vhd", 230, 383); // ce (w, ck)
+selectCodeEditor("driver.vhd", 274, 385); // ce (w, ck)
+selectCodeEditor("driver.vhd", 318, 387); // ce (w, ck)
+// [GUI Memory]: 90 MB (+1882kb) [00:06:09]
+selectCodeEditor("driver.vhd", 353, 382); // ce (w, ck)
+selectCodeEditor("driver.vhd", 398, 381); // ce (w, ck)
+selectCodeEditor("driver.vhd", 440, 381); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("driver.vhd", 723, 381); // ce (w, ck)
+selectCodeEditor("driver.vhd", 48, 408); // ce (w, ck)
+selectCodeEditor("driver.vhd", 48, 406); // ce (w, ck)
+selectCodeEditor("driver.vhd", 103, 347); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 690, 332); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 111, 350); // ce (w, ck)
+selectCodeEditor("driver.vhd", 606, 350); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 97, 406); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 690, 385); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 131, 400); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bx (ck)
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri May 31 13:10:39 2019] Launched synth_1... Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log [Fri May 31 13:10:39 2019] Launched impl_1... Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,309 MB. GUI used memory: 49 MB. Current time: 5/31/19 1:10:42 PM EEST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 213 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// [GUI Memory]: 96 MB (+1068kb) [00:10:58]
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/WifiTopLevel.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 126 seconds
+selectCodeEditor("driver.vhd", 549, 257); // ce (w, ck)
+selectCodeEditor("driver.vhd", 594, 283); // ce (w, ck)
+// Elapsed time: 79 seconds
+selectCodeEditor("driver.vhd", 497, 336); // ce (w, ck)
+// Elapsed time: 122 seconds
+selectCodeEditor("driver.vhd", 220, 312); // ce (w, ck)
+selectCodeEditor("driver.vhd", 352, 317); // ce (w, ck)
+selectCodeEditor("driver.vhd", 390, 320); // ce (w, ck)
+selectCodeEditor("driver.vhd", 430, 313); // ce (w, ck)
+selectCodeEditor("driver.vhd", 482, 316); // ce (w, ck)
+selectCodeEditor("driver.vhd", 472, 315); // ce (w, ck)
+selectCodeEditor("driver.vhd", 477, 314); // ce (w, ck)
+selectCodeEditor("driver.vhd", 516, 315); // ce (w, ck)
+selectCodeEditor("driver.vhd", 558, 320); // ce (w, ck)
+selectCodeEditor("driver.vhd", 603, 316); // ce (w, ck)
+selectCodeEditor("driver.vhd", 647, 316); // ce (w, ck)
+selectCodeEditor("driver.vhd", 684, 319); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("driver.vhd", 48, 333); // ce (w, ck)
+// [GUI Memory]: 102 MB (+1449kb) [00:18:58]
+// Elapsed time: 187 seconds
+selectCodeEditor("driver.vhd", 221, 265); // ce (w, ck)
+selectCodeEditor("driver.vhd", 350, 265); // ce (w, ck)
+selectCodeEditor("driver.vhd", 388, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 426, 264); // ce (w, ck)
+selectCodeEditor("driver.vhd", 426, 264, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "driver.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 467, 266); // ce (w, ck)
+selectCodeEditor("driver.vhd", 466, 266, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "driver.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 594, 268); // ce (w, ck)
+selectCodeEditor("driver.vhd", 594, 268, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "driver.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 639, 265); // ce (w, ck)
+selectCodeEditor("driver.vhd", 639, 265, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 551, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 551, 264, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 506, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 505, 262, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 509, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 509, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 509, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 509, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 512, 287); // ce (w, ck)
+selectCodeEditor("driver.vhd", 510, 266); // ce (w, ck)
+selectCodeEditor("driver.vhd", 510, 266, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 425, 262); // ce (w, ck)
+selectCodeEditor("driver.vhd", 424, 262, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 676, 266); // ce (w, ck)
+selectCodeEditor("driver.vhd", 676, 266, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("driver.vhd", 103, 264); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'c'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 25, 280); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'v'); // ce (w, ck)
+selectCodeEditor("driver.vhd", 718, 277); // ce (w, ck)
+selectCodeEditor("driver.vhd", 718, 278, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("driver.vhd", 736, 280); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bx (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri May 31 13:24:49 2019] Launched synth_1... Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/synth_1/runme.log [Fri May 31 13:24:49 2019] Launched impl_1... Run output will be captured here: D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/runme.log 
+// bx (ck):  Generate Bitstream : addNotify
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 129 seconds
+selectCodeEditor("driver.vhd", 753, 283); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 60 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectButton(PAResourceOtoP.ProgramDebugTab_PROGRAM_DEVICE, "Program device"); // h (cM, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {D:/PROJECTs/fpga-iot/esp8266/esp8266.runs/impl_1/WifiTopLevel.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("driver.vhd", 24, 399); // ce (w, ck)
+typeControlKey((HResource) null, "driver.vhd", 'c'); // ce (w, ck)
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "driver.vhd", 'c'); // ce (w, ck)
+// Elapsed time: 85 seconds
+selectCodeEditor("driver.vhd", 1037, 167); // ce (w, ck)
